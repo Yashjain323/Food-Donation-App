@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@drawable/bgcolor"
+android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="130dp"
+        android:layout_height="168dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="344dp"
+        android:foreground="@drawable/Dayalbagh_Educational_Institute_logo" />
+
+<ImageView
+    android:id="@+id/imageViewseller"
+    android:layout_width="246dp"
+    android:layout_height="265dp"
+    android:background="@color/colorWhite" />
+
+<Button
+    android:id="@+id/button30"
+    android:layout_width="250dp"
+    android:layout_height="71dp"
+    android:layout_below="@id/imageViewseller"
+    android:layout_marginTop="0dp"
+    android:text="Take picture" />
+
+<EditText
+    android:id="@+id/editTextNameseller"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="191dp"
+    android:background="@color/colorWhite"
+    android:ems="10"
+    android:hint="Name"
+    android:inputType="textPersonName"
+    android:textColor="@color/black"
+    android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/editTextEmailAddressseller"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="151dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/useraddress2seller"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="111dp"
+        android:background="@color/colorWhite"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <ImageView
+    android:id="@+id/imageView7seller"
+    android:layout_width="46dp"
+    android:layout_height="35dp"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginEnd="17dp"
+    android:layout_marginBottom="195dp"
+    android:foreground="@drawable/editicon" />
+
+    <ImageView
+        android:id="@+id/imageView8seller"
+        android:layout_width="46dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="155dp"
+        android:foreground="@drawable/editicon" />
+
+    <ImageView
+        android:id="@+id/imageView6seller"
+        android:layout_width="46dp"
+        android:layout_height="35dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="117dp"
+        android:foreground="@drawable/editicon" />
+
+</RelativeLayout>
