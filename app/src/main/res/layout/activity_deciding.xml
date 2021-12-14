@@ -52,9 +52,9 @@
             android:layout_marginLeft="110dp"
             android:layout_marginTop="30dp"
             android:background="#FFFFFF"
-            android:text="SEARCH"
+            android:text="Donor"
             android:textColor="@color/white"
-            android:textSize="22sp" />
+            android:textSize="30sp" />
 
         <Button
             android:id="@+id/list"
@@ -63,9 +63,9 @@
             android:layout_marginLeft="110dp"
             android:layout_marginTop="30dp"
             android:background="#FFFFFF"
-            android:text="LIST"
+            android:text="Recipient"
             android:textColor="@color/white"
-            android:textSize="22sp" />
+            android:textSize="29sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

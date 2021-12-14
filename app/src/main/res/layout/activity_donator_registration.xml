@@ -27,11 +27,13 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="410dp"
-        android:layout_height="60dp"
+        android:layout_width="399dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="1dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="10dp"
+        android:foreground="@drawable/registericon"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -56,8 +58,8 @@
         <EditText
             android:id="@+id/fName"
             android:layout_width="358dp"
-            android:layout_height="39dp"
-            android:layout_marginTop="18dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
             android:layout_marginEnd="25dp"
             android:ems="10"
             android:hint="FirstName" />
@@ -65,7 +67,7 @@
         <EditText
             android:id="@+id/lName"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:hint="LastName"
             android:inputType="text"
             tools:layout_editor_absoluteX="0dp"
@@ -74,7 +76,7 @@
         <EditText
             android:id="@+id/useraddress1"
             android:layout_width="match_parent"
-            android:layout_height="37dp"
+            android:layout_height="wrap_content"
             android:hint="Address"
             android:inputType="text"
             tools:layout_editor_absoluteX="11dp"
@@ -102,6 +104,7 @@
             android:id="@+id/confirmpasswordField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="0"
             android:ems="10"
             android:hint="ConfirmPassword"
             android:inputType="textPassword"
@@ -112,7 +115,7 @@
             android:id="@+id/signupBtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:text="SignUp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="527dp" />
