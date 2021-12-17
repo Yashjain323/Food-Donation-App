@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodDonationApplication">
+        <activity android:name=".OrganisationSetup"></activity>
+        <activity android:name=".SellerRegistration" />
         <activity
             android:name=".ForgotPassword"
             android:exported="true" />

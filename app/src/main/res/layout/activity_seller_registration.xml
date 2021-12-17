@@ -4,22 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonatorRegistration">
+    tools:context=".SellerRegistration">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="222dp"
-        android:layout_height="27dp"
+        android:layout_width="349dp"
+        android:layout_height="54dp"
         android:layout_gravity="center"
         android:layout_marginStart="97dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="5dp"
         android:alpha="1"
-        android:text="Donator Registration"
+        android:text="Receipient Registration"
         android:textAlignment="center"
         android:textColor="#121212"
-        android:textSize="22sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,23 +27,23 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="405dp"
-        android:layout_height="120dp"
+        android:layout_width="308dp"
+        android:layout_height="137dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="10dp"
-        android:foreground="@drawable/registericon"
+        android:foreground="@drawable/images"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="363dp"
-        android:layout_height="420dp"
+        android:layout_width="367dp"
+        android:layout_height="330dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="21dp"
@@ -62,18 +62,10 @@
             android:layout_marginTop="0dp"
             android:layout_marginEnd="25dp"
             android:ems="10"
-            android:hint="FirstName"
-            android:textSize="22sp" />
-
-        <EditText
-            android:id="@+id/lName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="LastName"
-            android:inputType="text"
-            android:textSize="22sp"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="172dp" />
+            android:hint="Name of Organisation"
+            android:inputType="textMultiLine"
+            android:textSize="30sp" />
+        />
 
         <EditText
             android:id="@+id/emailID"
@@ -81,7 +73,7 @@
             android:layout_height="wrap_content"
             android:hint="EmailID"
             android:inputType="textEmailAddress"
-            android:textSize="22sp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="232dp" />
 
@@ -91,7 +83,7 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textSize="22sp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="251dp" />
 
@@ -99,11 +91,10 @@
             android:id="@+id/confirmpasswordField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0"
             android:ems="10"
             android:hint="ConfirmPassword"
             android:inputType="textPassword"
-            android:textSize="22sp"
+            android:textSize="25sp"
             tools:layout_editor_absoluteX="21dp"
             tools:layout_editor_absoluteY="279dp" />
 
@@ -111,7 +102,7 @@
             android:id="@+id/signupBtn"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="30dp"
             android:text="SignUp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="527dp" />
