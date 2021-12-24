@@ -16,7 +16,7 @@
         android:layout_marginEnd="98dp"
         android:layout_marginBottom="5dp"
         android:alpha="1"
-        android:text="Donator Registration"
+        android:text="Donor Registration"
         android:textAlignment="center"
         android:textColor="#121212"
         android:textSize="22sp"
@@ -76,7 +76,7 @@
             tools:layout_editor_absoluteY="172dp" />
 
         <EditText
-            android:id="@+id/emailID"
+            android:id="@+id/emailIdDonor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="EmailID"
@@ -86,7 +86,7 @@
             tools:layout_editor_absoluteY="232dp" />
 
         <EditText
-            android:id="@+id/passwordField"
+            android:id="@+id/passwordDonor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -99,7 +99,6 @@
             android:id="@+id/confirmpasswordField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0"
             android:ems="10"
             android:hint="ConfirmPassword"
             android:inputType="textPassword"
@@ -108,7 +107,7 @@
             tools:layout_editor_absoluteY="279dp" />
 
         <Button
-            android:id="@+id/signupBtn"
+            android:id="@+id/signupBtnDonor"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="60dp"
@@ -117,4 +116,18 @@
             tools:layout_editor_absoluteY="527dp" />
 
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="3dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

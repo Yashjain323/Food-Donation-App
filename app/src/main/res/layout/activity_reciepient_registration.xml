@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SellerRegistration">
+    tools:context=".ReciepientRegistration">
 
     <TextView
         android:id="@+id/textView"
@@ -68,7 +68,7 @@
         />
 
         <EditText
-            android:id="@+id/emailID"
+            android:id="@+id/emailIdDonor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="EmailID"
@@ -78,7 +78,7 @@
             tools:layout_editor_absoluteY="232dp" />
 
         <EditText
-            android:id="@+id/passwordField"
+            android:id="@+id/passwordDonor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -99,7 +99,7 @@
             tools:layout_editor_absoluteY="279dp" />
 
         <Button
-            android:id="@+id/signupBtn"
+            android:id="@+id/signupBtnDonor"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"

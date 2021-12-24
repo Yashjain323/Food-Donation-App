@@ -46,7 +46,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/search"
+            android:id="@+id/donorDecide"
             android:layout_width="200dp"
             android:layout_height="66dp"
             android:layout_marginLeft="110dp"
@@ -57,7 +57,7 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/list"
+            android:id="@+id/recipientDecide"
             android:layout_width="200dp"
             android:layout_height="66dp"
             android:layout_marginLeft="110dp"
