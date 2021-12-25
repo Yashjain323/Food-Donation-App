@@ -17,9 +17,8 @@ import com.google.android.gms.tasks.Task;
 import static android.widget.Toast.LENGTH_LONG;
 
 public class DonorSignIn extends AppCompatActivity {
-    private Button Button1;
+    private Button Button1,Btn;
     private EditText emailTextView, passwordTextView;
-    private Button Btn;
     private ProgressBar progressbar;
 
     private FirebaseAuth mAuth;
@@ -44,11 +43,17 @@ public class DonorSignIn extends AppCompatActivity {
                 loginUserAccount();
             }
         });
+        Button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(/*getApplicationContext()*/DonorSignIn.this, DonorRegistration.class));
+                Toast.makeText(getApplicationContext(),"Enter your details",LENGTH_LONG).show();
+            }
+        });
     }
 
     private void loginUserAccount()
     {
-
         // show the visibility of progress bar to show loading
         progressbar.setVisibility(View.VISIBLE);
 
@@ -77,36 +82,25 @@ public class DonorSignIn extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(),
-                                            "Login successful!!",
-                                            Toast.LENGTH_LONG)
-                                            .show();
+                                    Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_LONG).show();
 
                                     // hide the progress bar
                                     progressbar.setVisibility(View.GONE);
 
                                     // if sign-in is successful
                                     // intent to home activity
-                                    Intent intent
-                                            = new Intent(DonorSignIn.this, DonatorProfile.class);
+                                    Intent intent = new Intent(DonorSignIn.this, DonatorProfile.class);
                                     startActivity(intent);
                                 }
 
                                 else {
 
                                     // sign-in failed
-                                    Toast.makeText(getApplicationContext(), "Login failed!!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Login failed dubara kar!!",Toast.LENGTH_LONG).show();
                                     // hide the progress bar
                                     progressbar.setVisibility(View.GONE);
                                 }
                             }
                         });
-        Button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), DonorRegistration.class));
-                Toast.makeText(getApplicationContext(),"Enter your details",LENGTH_LONG).show();
-            }
-        });
     }
 }
