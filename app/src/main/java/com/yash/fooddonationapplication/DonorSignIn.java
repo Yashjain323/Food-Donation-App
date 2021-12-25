@@ -26,13 +26,13 @@ public class DonorSignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_sign_in);
-        Button1=findViewById(R.id.dSignUpButton);
         mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
         emailTextView = findViewById(R.id.emailDonor);
         passwordTextView = findViewById(R.id.donorPassword);
         Btn = findViewById(R.id.donorSignInButton);
+        Button1=findViewById(R.id.dSignUpButton);
         progressbar = findViewById(R.id.progressBar);
 
         // Set on Click Listener on Sign-in button
@@ -46,8 +46,12 @@ public class DonorSignIn extends AppCompatActivity {
         Button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(/*getApplicationContext()*/DonorSignIn.this, DonorRegistration.class));
                 Toast.makeText(getApplicationContext(),"Enter your details",LENGTH_LONG).show();
+                Intent intent = new Intent(DonorSignIn.this, DonorRegistration.class);
+                startActivity(intent);
+                /*
+                startActivity(new Intent(DonorSignIn.this,DonorRegistration.class));
+*/
             }
         });
     }
