@@ -11,11 +11,11 @@ import android.widget.Toast;
 import static android.widget.Toast.LENGTH_LONG;
 
 public class RecipientSignIn extends AppCompatActivity {
-    Button Button1 = (Button)findViewById(R.id.dSignUpButton);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recipient_sign_in);
+        Button Button1 = (Button)findViewById(R.id.dSignUpButton);
         Button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
