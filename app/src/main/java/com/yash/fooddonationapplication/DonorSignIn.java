@@ -17,7 +17,7 @@ import com.google.android.gms.tasks.Task;
 import static android.widget.Toast.LENGTH_LONG;
 
 public class DonorSignIn extends AppCompatActivity {
-    Button Button1 = (Button)findViewById(R.id.dSignUpButton);
+    private Button Button1;
     private EditText emailTextView, passwordTextView;
     private Button Btn;
     private ProgressBar progressbar;
@@ -27,6 +27,7 @@ public class DonorSignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_sign_in);
+        Button1=findViewById(R.id.dSignUpButton);
         mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
