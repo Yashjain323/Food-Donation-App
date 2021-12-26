@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".reciepientSetup">
 
+    <EditText
+        android:id="@+id/orgSetupDesc"
+        android:layout_width="324dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/addOrgButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orgSetupPhone" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="352dp"
@@ -14,24 +30,24 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="37dp"
         android:text="Organisation Setup"
         android:textColor="#673AB7"
         android:textSize="40sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/orgSetName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="307dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="85dp"
+        android:id="@+id/addOrgButton"
+        android:layout_width="302dp"
+        android:layout_height="57dp"
         android:layout_marginTop="314dp"
-        android:layout_marginEnd="85dp"
         android:layout_marginBottom="11dp"
         android:text="Add Orgainsation"
-        android:textSize="24sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,50 +59,57 @@
         android:layout_height="82dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        app:srcCompat="@android:drawable/ic_input_add"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="457dp" />
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addOrgButton"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
+        android:id="@+id/orgSetName"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="56dp"
         android:ems="10"
-        android:hint="Enter your name"
+        android:hint="Enter your Organisation Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPostalAddress"
+        app:layout_constraintBottom_toTopOf="@+id/orgSetAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextTextPostalAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="33dp"
+        android:id="@+id/orgSetAddress"
+        android:layout_width="327dp"
+        android:layout_height="67dp"
         android:ems="10"
         android:hint="Address"
         android:inputType="textPostalAddress"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/orgSetupPhone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/orgSetName" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="wrap_content"
+        android:id="@+id/orgSetupPhone"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="56dp"
         android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="256dp" />
+        android:hint="Enter Your Phone/Telephone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/orgSetupDesc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orgSetAddress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

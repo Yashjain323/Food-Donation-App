@@ -7,8 +7,8 @@
     tools:context=".DonorSignIn">
 
     <EditText
-        android:id="@+id/donorPassword"
-        android:layout_width="271dp"
+        android:id="@+id/reciepientPass"
+        android:layout_width="274dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
@@ -19,21 +19,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/emailDonor"
+        android:id="@+id/emailReciepient"
         android:layout_width="274dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/donorPassword"
+        app:layout_constraintBottom_toTopOf="@+id/reciepientPass"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Button
-        android:id="@+id/donorSignInButton"
+        android:id="@+id/rSignInButton"
         android:layout_width="176dp"
         android:layout_height="53dp"
         android:layout_marginBottom="132dp"
@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donorPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/reciepientPass" />
 
     <Button
-        android:id="@+id/dSignUpButton"
+        android:id="@+id/rSignUpButton"
         android:layout_width="173dp"
         android:layout_height="52dp"
         android:layout_marginStart="120dp"
@@ -58,11 +58,13 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donorSignInButton" />
+        app:layout_constraintTop_toBottomOf="@+id/rSignInButton"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
+        android:id="@+id/progressBarSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
@@ -75,12 +77,14 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="119dp"
-        android:layout_height="138dp"
+        android:layout_width="163dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/userprofile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

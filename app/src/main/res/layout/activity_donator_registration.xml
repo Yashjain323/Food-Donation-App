@@ -76,7 +76,7 @@
             tools:layout_editor_absoluteY="172dp" />
 
         <EditText
-            android:id="@+id/emailIdDonor"
+            android:id="@+id/emailIdR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="EmailID"
@@ -86,7 +86,7 @@
             tools:layout_editor_absoluteY="232dp" />
 
         <EditText
-            android:id="@+id/passwordDonor"
+            android:id="@+id/passwordR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -107,7 +107,7 @@
             tools:layout_editor_absoluteY="279dp" />
 
         <Button
-            android:id="@+id/signupBtnDonor"
+            android:id="@+id/signupBtnR"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="60dp"
@@ -118,7 +118,7 @@
     </LinearLayout>
 
     <ProgressBar
-        android:id="@+id/progressbar"
+        android:id="@+id/progressbarR"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"

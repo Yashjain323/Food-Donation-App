@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Button;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
@@ -22,6 +21,7 @@ public class DonorRegistration extends AppCompatActivity {
     private Button Btn;
     private ProgressBar progressbar;
     private FirebaseAuth mAuth;
+    public String currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,10 +33,10 @@ public class DonorRegistration extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
-        emailTextView = findViewById(R.id.emailIdDonor);
-        passwordTextView = findViewById(R.id.passwordDonor);
-        Btn = findViewById(R.id.signupBtnDonor);
-        progressbar = findViewById(R.id.progressbar);
+        emailTextView = findViewById(R.id.emailIdR);
+        passwordTextView = findViewById(R.id.passwordR);
+        Btn = findViewById(R.id.signupBtnR);
+        progressbar = findViewById(R.id.progressbarR);
 
         // Set on Click Listener on Registration button
         Btn.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +79,7 @@ public class DonorRegistration extends AppCompatActivity {
                                     "Registration successful!",
                                     Toast.LENGTH_LONG)
                                     .show();
+                            currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                             // hide the progress bar
                             progressbar.setVisibility(View.GONE);

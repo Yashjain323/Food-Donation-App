@@ -29,11 +29,11 @@ public class DonorSignIn extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         // initialising all views through id defined above
-        emailTextView = findViewById(R.id.emailDonor);
-        passwordTextView = findViewById(R.id.donorPassword);
-        Btn = findViewById(R.id.donorSignInButton);
-        Button1=findViewById(R.id.dSignUpButton);
-        progressbar = findViewById(R.id.progressBar);
+        emailTextView = findViewById(R.id.emailReciepient);
+        passwordTextView = findViewById(R.id.reciepientPass);
+        Btn = findViewById(R.id.rSignInButton);
+        Button1=findViewById(R.id.rSignUpButton);
+        progressbar = findViewById(R.id.progressBarSign);
 
         // Set on Click Listener on Sign-in button
         Btn.setOnClickListener(new View.OnClickListener() {
