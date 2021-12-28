@@ -34,11 +34,15 @@ public class reciepientSetup extends AppCompatActivity {
                 orgAddress = findViewById(R.id.orgSetAddress);
                 orgPhone = findViewById(R.id.orgSetupPhone);
                 orgDesc = findViewById(R.id.orgSetupDesc);
+                String orgNameText= orgName.getText().toString();
+                String orgAddressText = orgAddress.getText().toString();
+                String orgDescText = orgDesc.getText().toString();
+                String orgPhoneText = orgPhone.getText().toString();
+
                 SQLiteDatabase myDatabase = openOrCreateDatabase("OrgTable", MODE_PRIVATE, null);
-                myDatabase.execSQL("CREATE TABLE IF NOT EXISTS orgs(name "VARCHAR"address "VARCHAR", " +
-                        "description "VARCHAR",phone "INT(10)")");
+                myDatabase.execSQL("CREATE TABLE IF NOT EXISTS orgs(name VARCHAR, address VARCHAR, description VARCHAR,phone INT(10))");
                 myDatabase.execSQL("INSERT INTO orgs(name,address,description,phone) " +
-                        "VALUES (orgName.getText().toString(),orgAddress.getText().toString(),orgDesc.getText().toString(),orgPhone.getText().toString())");
+                        "VALUES ('"+ orgNameText +"','"+orgAddressText +"','" + "'"+orgDescText+"','"+orgPhoneText+"');");
             }
         });
 

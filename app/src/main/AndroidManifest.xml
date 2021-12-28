@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodDonationApplication">
-        <activity android:name=".reciepientSetup"></activity>
+        <activity android:name=".DonorAchievements"></activity>
+        <activity android:name=".DonorHomePage" />
+        <activity android:name=".reciepientSetup" />
         <activity android:name=".RecipientSignIn" />
         <activity android:name=".DonorSignIn" />
         <activity android:name=".OrganisationSetup" />
@@ -18,8 +20,8 @@
             android:name=".ForgotPassword"
             android:exported="true" />
         <activity android:name=".DonatorProfile" />
-        <activity android:name=".DecidingActivity"/>
-        <activity android:name=".DonorRegistration"/>
+        <activity android:name=".DecidingActivity" />
+        <activity android:name=".DonorRegistration" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

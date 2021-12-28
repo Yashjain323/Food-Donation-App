@@ -93,7 +93,7 @@ public class DonorSignIn extends AppCompatActivity {
 
                                     // if sign-in is successful
                                     // intent to home activity
-                                    Intent intent = new Intent(DonorSignIn.this, DonatorProfile.class);
+                                    Intent intent = new Intent(DonorSignIn.this, DonorHomePage.class);
                                     startActivity(intent);
                                 }
 
