@@ -8,6 +8,8 @@
     <item android:title="My Achievements"
         android:id="@+id/menuAchieve">
     </item>
+    <item android:title="Show on maps"
+        android:id="@+id/menuMaps"/>
     <item android:title="Log Out"
         android:id="@+id/donorLogOut"></item>
 </menu>

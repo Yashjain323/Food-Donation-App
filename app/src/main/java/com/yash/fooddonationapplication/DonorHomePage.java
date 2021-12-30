@@ -25,6 +25,10 @@ public class DonorHomePage extends AppCompatActivity {
                 intent = new Intent(DonorHomePage.this, DonorAchievements.class);
                 startActivity(intent);
                 return true;
+            case R.id.menuMaps:
+                intent = new Intent(DonorHomePage.this,MapsActivity.class);
+                startActivity(intent);
+                return true;
             case R.id.donorLogOut:
                 intent = new Intent(DonorHomePage.this,DonorSignIn.class);
                 startActivity(intent);
