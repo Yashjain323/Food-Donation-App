@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DonorFoodDetailsPost">
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".addproductactivity">
+-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:background="@drawable/bgcolor"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="70dp"
+                    android:text="ADD PRODUCT"
+                    android:textColor="#ffffff"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp">
+
+                    <TextView
+                        android:layout_width="171dp"
+                        android:layout_height="49dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Quantity"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_marginLeft="50dp"
+                        android:hint="Quantity"
+                        android:textSize="22sp" />
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp">
+
+                    <TextView
+                        android:layout_width="175dp"
+                        android:layout_height="65dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Amount :"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/totalAmount"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:hint="Amount"
+                        android:textSize="22sp" />
+                </GridLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp">
+
+                    <TextView
+                        android:layout_width="171dp"
+                        android:layout_height="49dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Total Amount :"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/amountperunit"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:hint="Total Amount"
+                        android:textSize="22sp" />
+                </GridLayout>
+
+
+                <Button
+                    android:id="@+id/btnaddproduct"
+                    android:layout_width="179dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:text="ADD"
+                    android:textColor="#ffffff" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="299dp"
+                    android:layout_height="wrap_content"
+                    android:text="CheckBox" />
+
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="297dp"
+                    android:layout_height="wrap_content"
+                    android:text="CheckBox" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+<!--
+    </androidx.appcompat.widget.LinearLayoutCompat>
+-->
+</androidx.constraintlayout.widget.ConstraintLayout>
