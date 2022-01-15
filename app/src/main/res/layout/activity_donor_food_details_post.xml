@@ -25,7 +25,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="139dp"
-                android:background="@drawable/bgcolor"
                 android:orientation="vertical">
 
                 <TextView
@@ -125,7 +124,6 @@
                     android:layout_height="65dp"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/button_rounded"
                     android:text="ADD"
                     android:textColor="#ffffff" />
 

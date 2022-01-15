@@ -2,11 +2,13 @@ package com.yash.fooddonationapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -34,17 +36,17 @@ public class reciepientSetup extends AppCompatActivity {
                 orgAddress = findViewById(R.id.orgSetAddress);
                 orgPhone = findViewById(R.id.orgSetupPhone);
                 orgDesc = findViewById(R.id.orgSetupDesc);
-                String orgNameText= orgName.getText().toString();
+                /*String orgNameText= orgName.getText().toString();
                 String orgAddressText = orgAddress.getText().toString();
                 String orgDescText = orgDesc.getText().toString();
                 String orgPhoneText = orgPhone.getText().toString();
-
+*/
                 SQLiteDatabase myDatabase = openOrCreateDatabase("OrgTable", MODE_PRIVATE, null);
+                DbClass mydb = null;
                 myDatabase.execSQL("CREATE TABLE IF NOT EXISTS orgs(name VARCHAR, address VARCHAR, description VARCHAR,phone INT(10))");
-                myDatabase.execSQL("INSERT INTO orgs(name,address,description,phone) " +
-                        "VALUES ('"+ orgNameText +"','"+orgAddressText +"','" + "'"+orgDescText+"','"+orgPhoneText+"');");
+                mydb.insertContact(orgName.getText().toString(), orgAddress.getText().toString(),orgPhone.getText().toString(), orgDesc.getText().toString());
+                Toast.makeText(getApplicationContext(), "Data Saved", Toast.LENGTH_LONG).show();
             }
         });
-
         }
     }

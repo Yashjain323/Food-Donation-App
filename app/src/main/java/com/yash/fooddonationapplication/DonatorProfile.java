@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -19,11 +20,19 @@ public class DonatorProfile extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                dispatchTakePictureIntent();
+                Intent intent = new Intent(Intent.ACTION_PICK,MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(intent,1);
+
             }
         });
     }
-    final static int REQUEST_IMAGE_CAPTURE = 1;
+   /* @Override
+    protected void onActivityResult(int requestCode,int resultCode, Intent data) {
+        super.onActivityResult(requestCode,resultCode,data);
+        Uri selectedImage = data.getData();
+        if(requestCode=1 && resultCode=RESULT_OK && data!=null) {
+    }*/
+    /*final static int REQUEST_IMAGE_CAPTURE = 1;
 
     private void dispatchTakePictureIntent() {
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -32,5 +41,5 @@ public class DonatorProfile extends AppCompatActivity {
         } catch (ActivityNotFoundException e) {
             // display error state to the user
         }
-    }
+    }*/
 }

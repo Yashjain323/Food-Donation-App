@@ -28,7 +28,8 @@
         android:layout_height="71dp"
         android:layout_below="@id/imageViewseller"
         android:layout_marginTop="0dp"
-        android:text="Take picture" />
+        android:text="Take picture"
+        android:textSize="22sp" />
 
     <EditText
         android:id="@+id/editTextNameseller"

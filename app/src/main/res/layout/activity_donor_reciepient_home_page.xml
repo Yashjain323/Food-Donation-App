@@ -21,12 +21,11 @@
                     android:layout_height="230dp"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:background="@drawable/bgcolor">
+                    >
 
                     <ImageView
                         android:layout_width="90dp"
                         android:layout_height="90dp"
-                        android:src="@drawable/admin"
                         android:layout_gravity="center"/>
 
                     <TextView
@@ -72,7 +71,6 @@
                                     android:id="@+id/imageViewseller"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/profile"
                                     android:layout_centerInParent="true"/>
 
                                 <TextView
@@ -119,7 +117,6 @@
                                     android:id="@+id/imageView4"
                                     android:layout_width="50dp"
                                     android:layout_height="50dp"
-                                    android:src="@drawable/data"
                                     android:layout_centerInParent="true"/>
 
                                 <TextView
