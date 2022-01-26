@@ -40,7 +40,7 @@ public class reciepientSetup extends AppCompatActivity {
                 orgAddress = findViewById(R.id.orgSetAddress);
                 orgPhone = findViewById(R.id.orgSetupPhone);
                 orgDesc = findViewById(R.id.orgSetupDesc);
-
+                Toast.makeText(reciepientSetup.this,"orgName"+orgName + "orgAddress" + orgAddress, Toast.LENGTH_LONG).show();
                 mydb = new DbClass(getApplicationContext());
 
               /*  SQLiteDatabase myDatabase = openOrCreateDatabase("OrgTable", MODE_PRIVATE, null);

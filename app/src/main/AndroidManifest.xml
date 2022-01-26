@@ -44,7 +44,7 @@
         <activity
             android:name=".ForgotPassword"
             android:exported="true" />
-        <activity android:name=".DonatorProfile" />
+        <activity android:name=".DonorProfile" />
         <activity android:name=".DecidingActivity" />
         <activity android:name=".DonorRegistration" />
         <activity android:name=".MainActivity" >

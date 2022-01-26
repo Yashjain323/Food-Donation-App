@@ -42,8 +42,7 @@ public class DbClass {
     // Insert a record
     public void insert(String name, String address, String desc, String phone) {
         // Add all the details to the table
-        String query = "INSERT INTO " + TABLE_N_AND_A + " (" + TABLE_ROW_NAME + ", " +
-                TABLE_ROW_ADDRESS + "," + TABLE_ROW_DESC + ","+ TABLE_ROW_PHONE +") " +
+        String query = "INSERT INTO " + TABLE_N_AND_A + " (" + TABLE_ROW_NAME + "," + TABLE_ROW_ADDRESS + "," + TABLE_ROW_DESC + ","+ TABLE_ROW_PHONE +") " +
                 "VALUES (" + "'" + name + "'" + ", " + "'" + address + "'" + "," + "'" + desc + "'" + ", " + "'" + phone + "'"+ "); ";
         Log.i("insert() = ", query);
         db.execSQL(query);

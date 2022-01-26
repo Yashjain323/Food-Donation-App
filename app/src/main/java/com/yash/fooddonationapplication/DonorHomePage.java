@@ -18,7 +18,7 @@ public class DonorHomePage extends AppCompatActivity {
         super.onOptionsItemSelected(item);
         switch(item.getItemId()) {
             case R.id.menuProfile:
-                Intent intent = new Intent(DonorHomePage.this, DonatorProfile.class);
+                Intent intent = new Intent(DonorHomePage.this, DonorProfile.class);
                 startActivity(intent);
                 return true;
             case R.id.menuAchieve:

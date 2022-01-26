@@ -1,71 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReciepientRegistration">
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="130dp"
-        android:layout_height="168dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="387dp"
-        android:foreground="@drawable/profileicon" />
+        android:layout_width="95dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="174dp"
+        android:foreground="@drawable/profileicon"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNameseller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewseller"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewseller"
         android:layout_width="246dp"
         android:layout_height="265dp"
-         />
+        android:background="#E6E6E6"
+        app:layout_constraintBottom_toTopOf="@+id/donorPicButton"
+        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/donorPicButton"
-        android:layout_width="250dp"
-        android:layout_height="71dp"
+        android:layout_width="247dp"
+        android:layout_height="52dp"
         android:layout_below="@id/imageViewseller"
-        android:layout_marginTop="0dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="54dp"
         android:text="Take picture"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNameseller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewseller" />
 
     <EditText
         android:id="@+id/editTextNameseller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="191dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddressseller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/donorPicButton" />
 
     <EditText
         android:id="@+id/editTextEmailAddressseller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="132dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
         android:ems="10"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNameseller" />
 
     <EditText
         android:id="@+id/useraddress2seller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="74dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
         android:hint="Address"
         android:inputType="text"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddressseller" />
 
     <ImageView
         android:id="@+id/imageView7seller"
@@ -73,9 +104,12 @@
         android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="195dp"
-        android:foreground="@drawable/edit_icon" />
+        android:layout_marginTop="61dp"
+        android:foreground="@drawable/edit_icon"
+        app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/useraddress2seller"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8seller" />
 
     <ImageView
         android:id="@+id/imageView8seller"
@@ -83,18 +117,10 @@
         android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="144dp"
-        android:foreground="@drawable/edit_icon" />
+        android:foreground="@drawable/edit_icon"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddressseller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNameseller" />
 
-    <ImageView
-        android:id="@+id/imageView6seller"
-        android:layout_width="46dp"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="85dp"
-        android:foreground="@drawable/edit_icon" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
