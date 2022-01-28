@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class DonorHomePage extends AppCompatActivity {
+    private Button readRecipientBtn;
+
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.donormenu,menu);
@@ -40,5 +44,15 @@ public class DonorHomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_home_page);
+        readRecipientBtn = findViewById(R.id.BtnReadRecipient);
+        readRecipientBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // opening a new activity via a intent.
+                Intent i = new Intent(DonorHomePage.this, ReciepientList.class);
+                startActivity(i);
+            }
+        });
+
     }
 }

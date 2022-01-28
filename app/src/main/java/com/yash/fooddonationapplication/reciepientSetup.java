@@ -1,21 +1,13 @@
 package com.yash.fooddonationapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.google.firebase.auth.FirebaseAuth;
-
-import static java.sql.Types.VARCHAR;
 
 public class reciepientSetup extends AppCompatActivity {
     private EditText orgName;
@@ -23,41 +15,48 @@ public class reciepientSetup extends AppCompatActivity {
     private EditText orgPhone;
     private EditText orgDesc;
     private Button addOrgButton;
-    DbClass mydb;
+    private DbHandler dbHandler;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reciepient_setup);
         addOrgButton = findViewById(R.id.addOrgButton);
-    /*
-        currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
-*/
+        orgName = findViewById(R.id.orgSetName);
+        orgAddress = findViewById(R.id.orgSetAddress);
+        orgPhone = findViewById(R.id.orgSetupPhone);
+        orgDesc = findViewById(R.id.orgSetupDesc);
+
+        dbHandler = new DbHandler(reciepientSetup.this);
 
         addOrgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                orgName = findViewById(R.id.orgSetName);
-                orgAddress = findViewById(R.id.orgSetAddress);
-                orgPhone = findViewById(R.id.orgSetupPhone);
-                orgDesc = findViewById(R.id.orgSetupDesc);
-                Toast.makeText(reciepientSetup.this,"orgName"+orgName + "orgAddress" + orgAddress, Toast.LENGTH_LONG).show();
-                mydb = new DbClass(getApplicationContext());
 
-              /*  SQLiteDatabase myDatabase = openOrCreateDatabase("OrgTable", MODE_PRIVATE, null);
-                myDatabase.execSQL("CREATE TABLE IF NOT EXISTS orgs(name VARCHAR, address VARCHAR, description VARCHAR,phone INT(10))");
-                mydb.insertContact(orgName.getText().toString(), orgAddress.getText().toString(),orgPhone.getText().toString(), orgDesc.getText().toString());*/
-                mydb.insert(orgName.getText().toString(),orgAddress.getText().toString(),orgDesc.getText().toString(),orgPhone.getText().toString());
-                showData(mydb.selectAll());
-                Toast.makeText(getApplicationContext(), "Data Saved", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(reciepientSetup.this, ReciepientList.class);
-                startActivity(intent);
+                // below line is to get data from all edit text fields.
+                String Name = orgName.getText().toString();
+                String Address = orgAddress.getText().toString();
+                String Phone = orgPhone.getText().toString();
+                String Desc = orgDesc.getText().toString();
+
+                // validating if the text fields are empty or not.
+                if (Name.isEmpty() && Address.isEmpty() && Phone.isEmpty() && Desc.isEmpty()) {
+                    Toast.makeText(reciepientSetup.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                // on below line we are calling a method to add new
+                // course to sqlite data and pass all our values to it.
+                dbHandler.addNewCourse(Name, Address, Phone, Desc);
+
+                // after adding the data we are displaying a toast message.
+                Toast.makeText(reciepientSetup.this, "Data has been added.", Toast.LENGTH_SHORT).show();
+                orgName.setText("");
+                orgAddress.setText("");
+                orgPhone.setText("");
+                orgDesc.setText("");
             }
         });
-        }
-    public void showData(Cursor c){
-        while (c.moveToNext()){
-            Log.i(c.getString(1), c.getString(2));
-        }
     }
-    }
+}
 

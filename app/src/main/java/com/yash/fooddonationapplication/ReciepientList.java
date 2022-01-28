@@ -1,24 +1,44 @@
 package com.yash.fooddonationapplication;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ReciepientList extends AppCompatActivity {
+
+    // creating variables for our array list,
+    // dbhandler, adapter and recycler view.
+    private ArrayList<RecipientDisplayModal> RecipientModalArrayList;
+    private DbHandler dbHandler;
+    private ReciepientRVAdapter reciepientRVAdapter;
+    private RecyclerView recipientRV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reciepient_list);
-       /* ListView myListView = findViewById(R.id.reciepientList);
-        ArrayList <String> donorList = new ArrayList<String>();
 
-    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1);
-    myListView.setAdapter(arrayAdapter);*/
+        // initializing our all variables.
+        RecipientModalArrayList = new ArrayList<>();
+        dbHandler = new DbHandler(ReciepientList.this);
+
+        // getting our course array
+        // list from db handler class.
+        RecipientModalArrayList = dbHandler.readCourses();
+
+        // on below line passing our array lost to our adapter class.
+        reciepientRVAdapter = new ReciepientRVAdapter(RecipientModalArrayList, ReciepientList.this);
+        recipientRV = findViewById(R.id.idRVCourses);
+
+        // setting layout manager for our recycler view.
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ReciepientList.this, RecyclerView.VERTICAL, false);
+        recipientRV.setLayoutManager(linearLayoutManager);
+
+        // setting our adapter to recycler view.
+        recipientRV.setAdapter(reciepientRVAdapter);
     }
 }
