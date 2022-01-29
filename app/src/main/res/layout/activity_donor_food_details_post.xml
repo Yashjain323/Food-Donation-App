@@ -16,134 +16,192 @@
         tools:context=".addproductactivity">
 -->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="139dp"
-                android:orientation="vertical">
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="410dp"
+        android:layout_height="328dp"
+        android:layout_marginTop="44dp"
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="70dp"
-                    android:text="ADD PRODUCT"
-                    android:textColor="#ffffff"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    />
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="67dp">
-
-                    <TextView
-                        android:layout_width="171dp"
-                        android:layout_height="49dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="Quantity"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:layout_marginLeft="50dp"
-                        android:hint="Quantity"
-                        android:textSize="22sp" />
-                </GridLayout>
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp">
-
-                    <TextView
-                        android:layout_width="175dp"
-                        android:layout_height="65dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="Amount :"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/totalAmount"
-                        android:layout_width="160dp"
-                        android:layout_height="wrap_content"
-                        android:layout_row="0"
-                        android:layout_column="1"
-                        android:layout_marginLeft="50dp"
-                        android:layout_marginTop="10dp"
-                        android:hint="Amount"
-                        android:textSize="22sp" />
-                </GridLayout>
-
-                <GridLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="67dp">
-
-                    <TextView
-                        android:layout_width="171dp"
-                        android:layout_height="49dp"
-                        android:layout_marginLeft="20dp"
-                        android:text="Total Amount :"
-                        android:textSize="22sp"
-                        android:textStyle="bold" />
-
-                    <EditText
-                        android:id="@+id/amountperunit"
-                        android:layout_width="155dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="50dp"
-                        android:hint="Total Amount"
-                        android:textSize="22sp" />
-                </GridLayout>
+        android:columnCount="2"
+        android:rowCount="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
-                <Button
-                    android:id="@+id/btnaddproduct"
-                    android:layout_width="179dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:text="ADD"
-                    android:textColor="#ffffff" />
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:text="Quantity"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-                <CheckBox
-                    android:id="@+id/checkBox"
-                    android:layout_width="299dp"
-                    android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+        <EditText
+            android:id="@+id/DonorFoodDetail_Quantity"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="3dp"
+            android:hint="Quantity"
+            android:textSize="22sp" />
 
-                <CheckBox
-                    android:id="@+id/checkBox2"
-                    android:layout_width="297dp"
-                    android:layout_height="wrap_content"
-                    android:text="CheckBox" />
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="Parishability"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-            </LinearLayout>
+        <EditText
+            android:id="@+id/DonorFoodDetail_Parishability"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="3dp"
+            android:hint="Parishability"
+            android:textSize="22sp" />
 
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="Nutrition Value"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-        </LinearLayout>
-<!--
-    </androidx.appcompat.widget.LinearLayoutCompat>
--->
+        <EditText
+            android:id="@+id/DonorFoodDetail_NutritionValue"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="3dp"
+            android:hint="Nutrition Value"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_margin="8dp"
+            android:layout_marginLeft="5dp"
+            android:text="Persons Fed"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/DonorFoodDetail_PersonsFed"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_margin="20dp"
+            android:layout_marginLeft="3dp"
+            android:hint="Persons Fed"
+            android:textSize="22sp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="213dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="380dp"
+        android:gravity="center"
+        android:text="Food Details"
+        android:background="@color/purple_200"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/DonorFoodDetail_MultiLine"
+        android:layout_width="383dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <CheckBox
+            android:id="@+id/DonorFoodDetail_solid"
+            android:layout_width="128dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="28dp"
+            android:text="Solid"
+            android:checked="true"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_editor_absoluteY="576dp" />
+
+        <CheckBox
+            android:id="@+id/DonorFoodDetail_liquid"
+            android:layout_width="128dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="28dp"
+            android:text="Liquid"
+            android:checked="true"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/solid"
+            app:layout_editor_absoluteY="576dp" />
+
+        <CheckBox
+            android:id="@+id/DonorFoodDetail_semisolid"
+            android:layout_width="128dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="28dp"
+            android:text="Semi Solid"
+            android:textStyle="bold"
+            android:checked="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/liquid" />
+    </LinearLayout>
+
+    <!--
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    -->
 </androidx.constraintlayout.widget.ConstraintLayout>
