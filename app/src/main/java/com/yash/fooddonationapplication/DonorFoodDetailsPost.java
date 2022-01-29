@@ -2,7 +2,6 @@ package com.yash.fooddonationapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -25,22 +24,21 @@ public class DonorFoodDetailsPost extends AppCompatActivity {
    private EditText DonorFoodDetails;
    private EditText postName;
    private FirebaseFirestore db;
-   private Button buttonClickPost;
-   private String postNameText,quantityText,perishablilityText,nutritionalValueText,personFedText,
+    private String postNameText,quantityText,perishablilityText,nutritionalValueText,personFedText,
            DonorFoodDetailsText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_donor_food_details_post);
+        db = FirebaseFirestore.getInstance();
         postName = findViewById(R.id.foodPostName);
         quantity = findViewById(R.id.DonorFoodDetail_Quantity);
         perishability = findViewById(R.id.DonorFoodDetail_Parishability);
         nutritionValue = findViewById(R.id.DonorFoodDetail_NutritionValue);
         personsFed = findViewById(R.id.DonorFoodDetail_PersonsFed);
         DonorFoodDetails = findViewById(R.id.DonorFoodDetail_MultiLine);
-        buttonClickPost = findViewById(R.id.buttonPost);
+        Button buttonClickPost = findViewById(R.id.buttonPost);
 
-        setContentView(R.layout.activity_donor_food_details_post);
-        db = FirebaseFirestore.getInstance();
         buttonClickPost.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
