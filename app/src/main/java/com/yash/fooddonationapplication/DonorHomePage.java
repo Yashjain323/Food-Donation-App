@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class DonorHomePage extends AppCompatActivity {
     private Button readRecipientBtn;
+    private Button FoodPostBtn;
 
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
@@ -45,6 +46,7 @@ public class DonorHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_home_page);
         readRecipientBtn = findViewById(R.id.BtnReadRecipient);
+        FoodPostBtn = findViewById(R.id.food_post_button);
         readRecipientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,6 +55,13 @@ public class DonorHomePage extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
+            FoodPostBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // opening a new activity via a intent.
+                    Intent i = new Intent(DonorHomePage.this, DonorFoodDetailsPost.class);
+                    startActivity(i);
+                }
+            });
     }
 }
