@@ -48,7 +48,6 @@
             android:exported="true" />
         <activity android:name=".DonorProfile" />
         <activity android:name=".DecidingActivity" />
-        <activity android:name=".DonorRegistration" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,6 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DonorRegistration" />
+
     </application>
 
 </manifest>

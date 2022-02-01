@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFB6"
+    tools:ignore="ExtraText">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
@@ -18,15 +20,61 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/rightarrow"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+    -->
+        <ImageView
+            android:id="@+id/imageViewMain"
+            android:layout_width="182dp"
+            android:layout_height="136dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258"
+            app:srcCompat="@drawable/fooood" />
 
-    <ImageView
-        android:id="@+id/imageViewMain"
-        android:layout_width="410dp"
-        android:layout_height="599dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="270dp"
+            android:layout_height="27dp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="Powered by Yash and company"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="236dp"
+        android:layout_height="54dp"
+        android:gravity="center"
+        android:text="Show some love,"
+        android:textAllCaps="true"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/foodd" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="236dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="216dp"
+        android:gravity="center"
+        android:text="Donate"
+        android:textAllCaps="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#AA336A"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
