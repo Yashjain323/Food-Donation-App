@@ -91,12 +91,12 @@ public class RecipientSignIn extends AppCompatActivity {
 
                                     // if sign-in is successful
                                     // intent to home activity
-                                    Intent intent = new Intent(RecipientSignIn.this, reciepientSetup.class);
+                                    Intent intent = new Intent(RecipientSignIn.this, ReciepientHomePage.class);
                                     startActivity(intent);
                                 } else {
 
                                     // sign-in failed
-                                    Toast.makeText(getApplicationContext(), "Login failed dubara kar!!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Login failed! Please login again.", Toast.LENGTH_LONG).show();
                                     // hide the progress bar
                                     progressbar.setVisibility(View.GONE);
                                 }

@@ -21,18 +21,18 @@
         app:srcCompat="@drawable/rightarrow"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
     -->
-        <ImageView
-            android:id="@+id/imageViewMain"
-            android:layout_width="182dp"
-            android:layout_height="136dp"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.258"
-            app:srcCompat="@drawable/fooood" />
+    <ImageView
+        android:id="@+id/imageViewMain"
+        android:layout_width="337dp"
+        android:layout_height="267dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258"
+        app:srcCompat="@drawable/fooood" />
 
         <TextView
             android:id="@+id/textView5"
@@ -52,9 +52,9 @@
         android:layout_width="236dp"
         android:layout_height="54dp"
         android:gravity="center"
-        android:text="Show some love,"
+        android:text="Show Some Love,"
         android:textAllCaps="true"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toEndOf="parent"

@@ -41,8 +41,11 @@
         <activity android:name=".reciepientSetup" />
         <activity android:name=".RecipientSignIn" />
         <activity android:name=".DonorSignIn" />
+        <activity android:name=".ReciepientHomePage" />
         <activity android:name=".ReciepientList" />
         <activity android:name=".ReciepientRegistration" />
+        <activity android:name=".DonorRegistration" />
+
         <activity
             android:name=".ForgotPassword"
             android:exported="true" />
@@ -55,8 +58,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DonorRegistration" />
-
     </application>
 
 </manifest>
