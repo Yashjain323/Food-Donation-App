@@ -46,7 +46,7 @@ public class DonorHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_home_page);
         readRecipientBtn = findViewById(R.id.BtnReadRecipient);
-        FoodPostBtn = findViewById(R.id.food_post_button);
+        FoodPostBtn = findViewById(R.id.orgSetupBtn);
         readRecipientBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

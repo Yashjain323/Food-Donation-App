@@ -55,12 +55,14 @@
             android:textSize="22sp" />
 
         <TextView
-            android:layout_width="138dp"
+            android:layout_width="165dp"
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_column="0"
             android:layout_margin="8dp"
             android:layout_marginLeft="30dp"
+            android:inputType="number"
+            android:maxLength="3"
             android:text="Perishability"
             android:textSize="22sp"
             android:textStyle="bold" />
@@ -95,7 +97,8 @@
             android:layout_column="1"
             android:layout_margin="20dp"
             android:layout_marginLeft="3dp"
-            android:hint="Nutrition Value"
+            android:maxLength="20"
+            android:hint="High/Low/Average"
             android:textSize="22sp" />
 
         <TextView
@@ -118,7 +121,15 @@
             android:layout_margin="10dp"
             android:layout_marginLeft="3dp"
             android:hint="Persons Fed"
+            android:maxLength="10"
+            android:inputType="number"
             android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="195dp"
+            android:layout_height="90dp"
+            android:inputType="phone" />
 
     </GridLayout>
 
@@ -231,8 +242,8 @@
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="5dp"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/DonorFoodDetail_MultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

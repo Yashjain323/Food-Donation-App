@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageViewseller"
-        android:layout_width="246dp"
-        android:layout_height="265dp"
+        android:layout_width="249dp"
+        android:layout_height="262dp"
         android:background="#E6E6E6"
         app:layout_constraintBottom_toTopOf="@+id/donorPicButton"
         app:layout_constraintEnd_toStartOf="@+id/imageView9"
@@ -32,23 +32,21 @@
 
     <Button
         android:id="@+id/donorPicButton"
-        android:layout_width="247dp"
-        android:layout_height="52dp"
+        android:layout_width="304dp"
+        android:layout_height="71dp"
         android:layout_below="@id/imageViewseller"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="54dp"
         android:text="Take picture"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/editTextNameseller"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewseller" />
 
     <EditText
         android:id="@+id/editTextNameseller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="301dp"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="31dp"
@@ -65,8 +63,8 @@
 
     <EditText
         android:id="@+id/editTextEmailAddressseller"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="301dp"
+        android:layout_height="69dp"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="31dp"
@@ -77,6 +75,7 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNameseller" />
 
@@ -104,12 +103,15 @@
         android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="30dp"
         android:foreground="@drawable/edit_icon"
         app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/useraddress2seller"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8seller" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView8seller"
+        app:layout_constraintVertical_bias="0.098" />
 
     <ImageView
         android:id="@+id/imageView8seller"
@@ -117,10 +119,14 @@
         android:layout_height="35dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="199dp"
+        android:layout_marginBottom="36dp"
         android:foreground="@drawable/edit_icon"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddressseller"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextNameseller" />
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toEndOf="@+id/editTextNameseller"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
