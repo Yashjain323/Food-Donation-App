@@ -7,26 +7,16 @@
     android:layout_height="match_parent"
     tools:context=".ReciepientRegistration">
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="95dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="174dp"
-        android:foreground="@drawable/profileicon"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNameseller"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewseller"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewseller"
-        android:layout_width="246dp"
-        android:layout_height="265dp"
-        android:background="#E6E6E6"
-        app:layout_constraintBottom_toTopOf="@+id/donorPicButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        android:layout_width="203dp"
+        android:layout_height="175dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/donatorprofile"
+        app:civ_border_color="@color/textcolor"
+        app:civ_border_width="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,33 +25,28 @@
         android:layout_width="247dp"
         android:layout_height="52dp"
         android:layout_below="@id/imageViewseller"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="54dp"
+        android:layout_marginBottom="36dp"
         android:text="Take picture"
         android:textSize="22sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNameseller"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewseller" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextNameseller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddressseller"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/donorPicButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewseller" />
 
     <EditText
         android:id="@+id/editTextEmailAddressseller"
@@ -75,8 +60,8 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNameseller" />
 
@@ -95,32 +80,30 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddressseller" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddressseller"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView7seller"
-        android:layout_width="46dp"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
+    <EditText
+        android:id="@+id/useraddressseller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="61dp"
-        android:foreground="@drawable/edit_icon"
-        app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/useraddress2seller"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8seller" />
-
-    <ImageView
-        android:id="@+id/imageView8seller"
-        android:layout_width="46dp"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:foreground="@drawable/edit_icon"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddressseller"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editTextNameseller" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailAddressseller"
+        app:layout_constraintVertical_bias="0.398" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

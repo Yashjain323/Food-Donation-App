@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DonorFoodDetailsPost">
+    tools:context=".DonorFoodDetailsPost"
+    android:background="@color/background">
+
 
     <!--<?xml version="1.0" encoding="utf-8"?>
 
@@ -19,14 +21,13 @@
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="405dp"
+        android:layout_width="374dp"
         android:layout_height="309dp"
-        android:layout_marginTop="256dp"
-
+        android:layout_marginTop="196dp"
         android:columnCount="2"
         android:rowCount="4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -124,16 +125,17 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="213dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/purple_200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+
         android:gravity="center"
         android:text="Food Details"
-        android:textSize="28sp"
+        android:textColor="@color/textcolor"
+        android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
+        app:layout_constraintHorizontal_bias="0.431"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -141,16 +143,18 @@
         android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.958">
 
         <CheckBox
             android:id="@+id/DonorFoodDetail_solid"
-            android:layout_width="128dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginBottom="28dp"
             android:text="Solid"
@@ -161,8 +165,8 @@
 
         <CheckBox
             android:id="@+id/DonorFoodDetail_liquid"
-            android:layout_width="128dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginRight="2dp"
             android:layout_marginBottom="28dp"
@@ -174,8 +178,8 @@
 
         <CheckBox
             android:id="@+id/DonorFoodDetail_semisolid"
-            android:layout_width="128dp"
-            android:layout_height="46dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="28dp"
             android:text="Semi Solid"
             android:textStyle="bold"
@@ -183,14 +187,15 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/liquid" />
+
     </LinearLayout>
 
     <EditText
         android:id="@+id/DonorFoodDetail_MultiLine"
-        android:layout_width="379dp"
-        android:layout_height="101dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="347dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
         android:gravity="start|top"
@@ -198,36 +203,16 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.942" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="312dp"
-        android:layout_marginBottom="17dp"
-        android:background="#CB0BEC"
-        android:text="State of Food :"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
-        app:layout_constraintVertical_bias="0.761" />
+        app:layout_constraintVertical_bias="0.981" />
 
     <EditText
         android:id="@+id/foodPostName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginStart="24dp"
         android:layout_marginEnd="140dp"
         android:layout_marginBottom="5dp"
         android:ems="10"
@@ -235,24 +220,35 @@
         android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/DonorFoodDetail_MultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/buttonPost"
         android:layout_width="101dp"
         android:layout_height="51dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginTop="36dp"
         android:text="Post"
-        app:layout_constraintBottom_toTopOf="@+id/DonorFoodDetail_MultiLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/foodPostName"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="State of Food :"
+        android:textColor="@color/textcolor"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!--
         </androidx.appcompat.widget.LinearLayoutCompat>
