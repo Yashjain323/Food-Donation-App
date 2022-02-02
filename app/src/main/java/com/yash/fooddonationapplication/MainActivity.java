@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
 //                 imageView.animate().alpha(1).setDuration(2000);
 //             }
 //         });
-//
 //        fab.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

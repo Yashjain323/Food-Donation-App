@@ -4,70 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DecidingActivity">
+    tools:context=".DecidingActivity"
+    android:background="@color/background">
 
-    <LinearLayout
+
+
+    <TextView
+        android:id="@+id/textView8"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:id="@+id/headerlayout"
-            android:layout_width="match_parent"
-            android:layout_height="216dp"
-            android:background="#FFC107">
-
-            <TextView
-                android:id="@+id/text"
-                android:layout_width="409dp"
-                android:layout_height="133dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="41dp"
-                android:layout_marginEnd="2dp"
-                android:fontFamily="sans-serif-black"
-                android:text="@string/app_name"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="50sp"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_marginTop="40dp"
-            android:gravity="center_horizontal"
-            android:text="What Are You?"
-            android:textColor="@color/purple_500"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="What Are You?"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/donorDecide"
-            android:layout_width="200dp"
-            android:layout_height="66dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="30dp"
-            android:background="#FFFFFF"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginTop="108dp"
+            android:background="@drawable/custom_button"
             android:text="Donor"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textColor="@color/textcolor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
 
         <Button
             android:id="@+id/recipientDecide"
-            android:layout_width="200dp"
-            android:layout_height="66dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="30dp"
-            android:background="#FFFFFF"
+            android:layout_width="123dp"
+            android:layout_height="123dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_marginBottom="196dp"
+            android:background="@drawable/custom_button"
             android:text="Recipient"
-            android:textColor="@color/white"
-            android:textSize="29sp" />
+            android:textColor="@color/textcolor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/donorDecide" />
 
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
