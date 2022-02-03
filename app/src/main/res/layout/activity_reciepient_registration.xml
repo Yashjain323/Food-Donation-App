@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ReciepientRegistration">
 
     <TextView
@@ -11,17 +12,16 @@
         android:layout_width="349dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="98dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginTop="28dp"
         android:alpha="1"
+        android:gravity="center"
         android:text="Receipient Registration"
         android:textAlignment="center"
-        android:textColor="#121212"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        android:textColor="@color/textcolor"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +34,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="10dp"
         android:foreground="@drawable/images"
+
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -42,9 +43,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="367dp"
-        android:layout_height="330dp"
-        android:layout_marginStart="28dp"
+        android:layout_width="325dp"
+        android:layout_height="307dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="21dp"
         android:layout_marginBottom="2dp"
@@ -53,61 +54,64 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:ignore="ExtraText">
 
         <EditText
             android:id="@+id/fName"
-            android:layout_width="377dp"
+            android:layout_width="277dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="25dp"
             android:ems="10"
             android:hint="Name of Organisation"
             android:inputType="textMultiLine"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
         />
 
         <EditText
             android:id="@+id/emailIdR"
-            android:layout_width="match_parent"
+            android:layout_width="277dp"
             android:layout_height="wrap_content"
             android:hint="EmailID"
             android:inputType="textEmailAddress"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="232dp" />
 
         <EditText
             android:id="@+id/passwordR"
-            android:layout_width="match_parent"
+            android:layout_width="277dp"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="251dp" />
 
         <EditText
             android:id="@+id/confirmpasswordField"
-            android:layout_width="match_parent"
+            android:layout_width="277dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="ConfirmPassword"
             android:inputType="textPassword"
-            android:textSize="25sp"
+            android:textSize="20sp"
             tools:layout_editor_absoluteX="21dp"
             tools:layout_editor_absoluteY="279dp" />
 
         <Button
             android:id="@+id/signupBtnR"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:layout_margin="55dp"
             android:layout_marginTop="30dp"
-            android:text="SignUp"
+            android:text="Sign Up"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="527dp" />
 
     </LinearLayout>
+
     <ProgressBar
         android:id="@+id/progressbarR"
         android:layout_width="wrap_content"

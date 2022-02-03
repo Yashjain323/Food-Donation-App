@@ -4,58 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".RecipientSignIn">
 
     <EditText
         android:id="@+id/reciepientPass"
-        android:layout_width="271dp"
+        android:layout_width="274dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="69dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="53dp"
+        android:layout_marginBottom="56dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/rSignInButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailReciepient" />
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/emailReciepient"
         android:layout_width="274dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="4dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/reciepientPass"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintHorizontal_bias="0.642"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/rSignInButton"
         android:layout_width="176dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginBottom="116dp"
         android:text="Sign In"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reciepientPass" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/rSignUpButton"
-        android:layout_width="173dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="120dp"
+        android:layout_width="176dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="110dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="118dp"
         android:layout_marginBottom="63dp"
@@ -66,32 +64,48 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rSignInButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ProgressBar
         android:id="@+id/progressBarSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
         android:layout_marginTop="42dp"
-        android:layout_marginBottom="513dp"
+        android:layout_marginBottom="5dp"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.389" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="154dp"
-        android:layout_height="118dp"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="31dp"
+        android:layout_width="155dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintBottom_toTopOf="@+id/emailReciepient"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/userprofile" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recipient Sign In"
+        android:textColor="@color/textcolor"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.36" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

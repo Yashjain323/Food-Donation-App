@@ -34,8 +34,8 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:text="DONOR DASHBOARD"
-                    android:textColor="#03A9F4"
-                    android:textSize="40sp"
+                    android:textColor="@color/textcolor"
+                    android:textSize="30sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
