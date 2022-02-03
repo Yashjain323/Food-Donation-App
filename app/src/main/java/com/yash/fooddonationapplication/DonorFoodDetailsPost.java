@@ -52,11 +52,15 @@ public class DonorFoodDetailsPost extends AppCompatActivity {
 
                 // validating the text fields if empty or not.
                 if (TextUtils.isEmpty(postNameText)) {
-                    postName.setError("Please enter Course Name");
+                    postName.setError("Please enter your name");
                 } else if (TextUtils.isEmpty(quantityText)) {
-                    quantity.setError("Please enter Course Description");
+                    quantity.setError("Please enter quantity");
                 } else if (TextUtils.isEmpty(perishablilityText)) {
-                    perishability.setError("Please enter Course Duration");
+                    perishability.setError("Please enter food perishability time");
+                } else if (TextUtils.isEmpty(nutritionalValueText)) {
+                    quantity.setError("Please enter nutritional value");
+                } else if (TextUtils.isEmpty(personFedText)) {
+                    perishability.setError("Please enter how many persons can be fed");
                 } else {
                     // calling method to add data to Firebase Firestore.
                     addDataToFirestore(postNameText, quantityText, perishablilityText,
@@ -85,14 +89,14 @@ public class DonorFoodDetailsPost extends AppCompatActivity {
                 public void onSuccess(DocumentReference documentReference) {
                     // after the data addition is successful
                     // we are displaying a success toast message.
-                    Toast.makeText(DonorFoodDetailsPost.this, "Your Course has been added to Firebase Firestore", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DonorFoodDetailsPost.this, "Your food details have been saved", Toast.LENGTH_SHORT).show();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception e) {
                     // this method is called when the data addition process is failed.
                     // displaying a toast message when data addition is failed.
-                    Toast.makeText(DonorFoodDetailsPost.this, "Fail to add course \n" + e, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DonorFoodDetailsPost.this, "Failed to add food details \n" + e, Toast.LENGTH_SHORT).show();
                 }
             });
         }

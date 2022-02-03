@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/idCVCOurseItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <!--Textview for displaying our Course Name-->
+        <TextView
+            android:id="@+id/idTVName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Name"
+            android:textColor="@color/purple_500"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--Textview for displaying our Course Duration-->
+        <TextView
+            android:id="@+id/idTVDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:maxLines="4"
+            android:lines="2"
+            android:text="Description"
+            android:textColor="@color/black" />
+
+        <!--Textview for displaying our Course Description-->
+        <LinearLayout
+            android:layout_width="388dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/idTVQuant"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Quantity"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/idTVPerishablity"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Perishability"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="388dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:padding="4dp">
+        <TextView
+            android:id="@+id/idTVNutrition"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Nutrition:"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/idTVFed"
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="Pesons Fed:"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

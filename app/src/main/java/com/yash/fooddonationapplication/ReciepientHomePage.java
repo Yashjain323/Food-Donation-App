@@ -43,11 +43,20 @@ import android.widget.Button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reciepient_home_page);
         Button reciepientSetupBtn = findViewById(R.id.orgSetupBtn);
+        Button showListDonorBtn = findViewById(R.id.BtnReadRecipient);
         reciepientSetupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // opening a new activity via a intent.
                 Intent i = new Intent(ReciepientHomePage.this, reciepientSetup.class);
+                startActivity(i);
+            }
+        });
+        showListDonorBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // opening a new activity via a intent.
+                Intent i = new Intent(ReciepientHomePage.this, DonorList.class);
                 startActivity(i);
             }
         });

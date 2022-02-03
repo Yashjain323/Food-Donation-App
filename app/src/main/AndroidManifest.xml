@@ -6,7 +6,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
-    <!--Permissions for internet-->
+    <!-- Permissions for internet -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -19,6 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodDonationApplication">
+        <activity android:name=".DonorList"></activity>
         <activity android:name=".DonorFoodDetailsPost" />
         <activity android:name=".DonorReciepientHomePage" />
         <!--
@@ -45,7 +46,6 @@
         <activity android:name=".ReciepientList" />
         <activity android:name=".ReciepientRegistration" />
         <activity android:name=".DonorRegistration" />
-
         <activity
             android:name=".ForgotPassword"
             android:exported="true" />
