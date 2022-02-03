@@ -9,7 +9,7 @@
     <!--Recycler view for displaying
         our data from Firestore-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVCourses"
+        android:id="@+id/idRVFood"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

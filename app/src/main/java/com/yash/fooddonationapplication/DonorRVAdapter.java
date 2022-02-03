@@ -1,4 +1,3 @@
-/*
 package com.yash.fooddonationapplication;
 
 import android.content.Context;
@@ -14,29 +13,32 @@ import java.util.ArrayList;
 
 public class DonorRVAdapter extends RecyclerView.Adapter<DonorRVAdapter.ViewHolder> {
     // creating variables for our ArrayList and context
-    private ArrayList<Courses> coursesArrayList;
+    private ArrayList<FoodDetailsPostDBhandler> coursesArrayList;
     private Context context;
 
     // creating constructor for our adapter class
-    public DonorRVAdapter(ArrayList<DonorList> coursesArrayList, Context context) {
+    public DonorRVAdapter(ArrayList<FoodDetailsPostDBhandler> coursesArrayList, Context context) {
         this.coursesArrayList = coursesArrayList;
         this.context = context;
     }
 
     @NonNull
     @Override
-    public CourseRVAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DonorRVAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // passing our layout file for displaying our card item
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.course_item, parent, false));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.donorlist_item, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CourseRVAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DonorRVAdapter.ViewHolder holder, int position) {
         // setting data to our text views from our modal class.
-        Courses courses = coursesArrayList.get(position);
-        holder.courseNameTV.setText(courses.getCourseName());
-        holder.courseDurationTV.setText(courses.getCourseDuration());
-        holder.courseDescTV.setText(courses.getCourseDescription());
+        FoodDetailsPostDBhandler food = coursesArrayList.get(position);
+        holder.NameTV.setText(food.getPostName());
+        holder.QunatTV.setText(food.getQuantText());
+        holder.PerishablityTV.setText(food.getperishability());
+        holder.NutritionTV.setText(food.getnutritionalValue());
+        holder.FedTV.setText(food.getpersonsFed());
+        holder.DescTV.setText(food.getDonorFoodDetails());
     }
 
     @Override
@@ -47,17 +49,22 @@ public class DonorRVAdapter extends RecyclerView.Adapter<DonorRVAdapter.ViewHold
 
     class ViewHolder extends RecyclerView.ViewHolder {
         // creating variables for our text views.
-        private final TextView courseNameTV;
-        private final TextView courseDurationTV;
-        private final TextView courseDescTV;
+        private final TextView NameTV;
+        private final TextView DescTV;
+        private final TextView FedTV;
+        private final TextView NutritionTV;
+        private final TextView PerishablityTV;
+        private final TextView QunatTV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // initializing our text views.
-            courseNameTV = itemView.findViewById(R.id.idTVCourseName);
-            courseDurationTV = itemView.findViewById(R.id.idTVCourseDuration);
-            courseDescTV = itemView.findViewById(R.id.idTVCourseDescription);
+            NameTV = itemView.findViewById(R.id.idTVName);
+            NutritionTV = itemView.findViewById(R.id.idTVNutrition);
+            DescTV = itemView.findViewById(R.id.idTVDesc);
+            FedTV = itemView.findViewById(R.id.idTVFed);
+            QunatTV = itemView.findViewById(R.id.idTVQuant);
+            PerishablityTV = itemView.findViewById(R.id.idTVPerishablity);
         }
     }
 }
-*/
