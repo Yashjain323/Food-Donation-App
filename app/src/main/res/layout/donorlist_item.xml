@@ -50,7 +50,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
-                android:text="PhoneNo :"
+                android:text="      PhoneNo :"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -61,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
                 android:padding="2dp"
+                android:textAlignment="viewStart"
                 android:textColor="@color/black" />
 
             <TextView
@@ -78,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight=".25"
                 android:padding="2dp"
+                android:textAlignment="viewStart"
                 android:textColor="@color/black" />
         </LinearLayout>
     <LinearLayout
@@ -92,7 +94,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight=".25"
-            android:text="Nutrition :"
+            android:text="      Nutrition :"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -102,6 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_weight=".25"
             android:padding="2dp"
+            android:textAlignment="viewStart"
             android:textColor="@color/black" />
 
         <TextView
@@ -119,6 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_weight=".25"
             android:padding="2dp"
+            android:textAlignment="viewStart"
             android:textColor="@color/black" />
     </LinearLayout>
     </LinearLayout>
