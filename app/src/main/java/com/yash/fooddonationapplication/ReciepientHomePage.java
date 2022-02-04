@@ -20,7 +20,7 @@ import android.widget.Button;
         super.onOptionsItemSelected(item);
         switch(item.getItemId()) {
             case R.id.recepientProfile:
-                Intent intent = new Intent(ReciepientHomePage.this, DonorProfile.class);
+                Intent intent = new Intent(ReciepientHomePage.this, RecipientProfile.class);
                 startActivity(intent);
                 return true;
             case R.id.recepientAchieve:

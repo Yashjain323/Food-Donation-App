@@ -29,7 +29,7 @@ public class DecidingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), RecipientSignIn.class));
-                Toast.makeText(getApplicationContext(),"Welcome User! Let's Register", LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Welcome Reciepient! Let's Sign IN", LENGTH_LONG).show();
             }
         });
 

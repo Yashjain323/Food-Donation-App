@@ -32,7 +32,7 @@
             android:id="@+id/idTVDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:lines="1"
+            android:lines="2"
             android:maxLines="4"
             android:padding="2dp"
             android:textColor="@color/black" />
@@ -49,8 +49,8 @@
                 android:id="@+id/textView10"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
-                android:text="      PhoneNo :"
+                android:layout_weight=".20"
+                android:text="  PhoneNo :"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 
@@ -59,7 +59,7 @@
                 android:id="@+id/idTVQuant"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".25"
+                android:layout_weight=".30"
                 android:padding="2dp"
                 android:textAlignment="viewStart"
                 android:textColor="@color/black" />
@@ -93,8 +93,8 @@
             android:id="@+id/textView11"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:text="      Nutrition :"
+            android:layout_weight=".20"
+            android:text="  Nutrition :"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
@@ -102,7 +102,7 @@
             android:id="@+id/idTVNutrition"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight=".25"
+            android:layout_weight=".30"
             android:padding="2dp"
             android:textAlignment="viewStart"
             android:textColor="@color/black" />
