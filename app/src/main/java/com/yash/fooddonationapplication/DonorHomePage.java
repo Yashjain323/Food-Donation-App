@@ -1,8 +1,17 @@
 package com.yash.fooddonationapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -41,10 +50,12 @@ public class DonorHomePage extends AppCompatActivity {
                 return false;
         }
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor_home_page);
+
         readRecipientBtn = findViewById(R.id.BtnReadRecipient);
         FoodPostBtn = findViewById(R.id.orgSetupBtn);
         readRecipientBtn.setOnClickListener(new View.OnClickListener() {
