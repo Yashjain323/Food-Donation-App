@@ -61,11 +61,11 @@ public class DonorRegistration extends AppCompatActivity {
 
         // Validations for input email and password
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Please enter password!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter password!!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -75,10 +75,7 @@ public class DonorRegistration extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task)
                     {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),
-                                    "Registration successful!",
-                                    Toast.LENGTH_LONG)
-                                    .show();
+                            Toast.makeText(getApplicationContext(), "Registration successful!", Toast.LENGTH_SHORT).show();
                             currentUser = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                             // hide the progress bar
@@ -92,7 +89,7 @@ public class DonorRegistration extends AppCompatActivity {
 
                             // Registration failed
                             Toast.makeText(
-                                    getApplicationContext(), "Registration failed!!" + " Please try again later", Toast.LENGTH_LONG)
+                                    getApplicationContext(), "Registration failed!!" + " Please try again later", Toast.LENGTH_SHORT)
                                     .show();
 
                             // hide the progress bar

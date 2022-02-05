@@ -66,7 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.clear();
                     userLocation = new LatLng(location.getLatitude(), location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location"));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,5));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,10));
                 }
             };
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

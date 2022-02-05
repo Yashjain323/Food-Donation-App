@@ -22,14 +22,14 @@ public class DecidingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), DonorSignIn.class));
-                Toast.makeText(getApplicationContext(),"Welcome Donor! Let's Sign IN",LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Welcome Donor! Let's Sign IN",Toast.LENGTH_SHORT).show();
             }
         });
         Button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), RecipientSignIn.class));
-                Toast.makeText(getApplicationContext(),"Welcome Reciepient! Let's Sign IN", LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Welcome Reciepient! Let's Sign IN", Toast.LENGTH_SHORT).show();
             }
         });
 

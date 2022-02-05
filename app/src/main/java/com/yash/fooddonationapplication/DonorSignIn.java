@@ -46,7 +46,7 @@ public class DonorSignIn extends AppCompatActivity {
         Button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Enter your details",LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"Enter your details",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(DonorSignIn.this, DonorRegistration.class);
                 startActivity(intent);
                 /*
@@ -68,12 +68,12 @@ public class DonorSignIn extends AppCompatActivity {
 
         // validations for input email and password
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter email!!", Toast.LENGTH_SHORT).show();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Please enter password!!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Please enter password!!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -86,7 +86,7 @@ public class DonorSignIn extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task)
                             {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_SHORT).show();
 
                                     // hide the progress bar
                                     progressbar.setVisibility(View.GONE);
@@ -100,7 +100,7 @@ public class DonorSignIn extends AppCompatActivity {
                                 else {
 
                                     // sign-in failed
-                                    Toast.makeText(getApplicationContext(), "Login failed dubara kar!!",Toast.LENGTH_LONG).show();
+                                    Toast.makeText(getApplicationContext(), "Login failed! Please enter correct EmailId and Password",Toast.LENGTH_LONG).show();
                                     // hide the progress bar
                                     progressbar.setVisibility(View.GONE);
                                 }
