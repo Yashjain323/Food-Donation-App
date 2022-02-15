@@ -36,6 +36,9 @@ public class DonorHomePage extends AppCompatActivity {
             case R.id.donorLogOut:
                 intent = new Intent(DonorHomePage.this,DonorSignIn.class);
                 startActivity(intent);
+            case R.id.donorContactUs:
+                intent = new Intent(DonorHomePage.this,DonorContactUs.class);
+                startActivity(intent);
             default:
                 return false;
         }

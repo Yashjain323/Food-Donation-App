@@ -10,6 +10,8 @@
     </item>
     <item android:title="Show on maps"
         android:id="@+id/menuMaps"/>
+    <item android:title="Contact Us"
+        android:id="@+id/donorContactUs"></item>
     <item android:title="Log Out"
         android:id="@+id/donorLogOut"></item>
 </menu>
