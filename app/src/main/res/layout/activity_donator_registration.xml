@@ -89,7 +89,7 @@
             android:id="@+id/passwordR"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:hint="Password"
+            android:hint="Create Password"
             android:inputType="textPassword"
             android:textSize="22sp"
             tools:layout_editor_absoluteX="0dp"

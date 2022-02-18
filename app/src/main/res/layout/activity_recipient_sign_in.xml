@@ -19,6 +19,7 @@
         app:layout_constraintBottom_toTopOf="@+id/rSignInButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.642"
+        app:passwordToggleEnabled="true"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText

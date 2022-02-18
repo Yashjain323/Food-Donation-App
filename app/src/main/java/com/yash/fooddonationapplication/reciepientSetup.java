@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class reciepientSetup extends AppCompatActivity {
@@ -14,7 +15,7 @@ public class reciepientSetup extends AppCompatActivity {
     private EditText orgAddress;
     private EditText orgPhone;
     private EditText orgDesc;
-    private Button addOrgButton;
+    private ImageView addOrgButton;
     private DbHandler dbHandler;
 
     @Override
