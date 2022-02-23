@@ -24,7 +24,7 @@ import android.widget.Button;
                 startActivity(intent);
                 return true;
             case R.id.recepientAchieve:
-                intent = new Intent(ReciepientHomePage.this, DonorAchievements.class);
+                intent = new Intent(ReciepientHomePage.this, ReciepientList.class);
                 startActivity(intent);
                 return true;
             case R.id.menuMaps:
@@ -32,8 +32,13 @@ import android.widget.Button;
                 startActivity(intent);
                 return true;
             case R.id.recepientLogOut:
-                intent = new Intent(ReciepientHomePage.this,RecipientSignIn.class);
+                intent = new Intent(ReciepientHomePage.this,DecidingActivity.class);
                 startActivity(intent);
+                return true;
+            case R.id.rContactUs:
+                intent = new Intent(ReciepientHomePage.this,DonorContactUs.class);
+                startActivity(intent);
+                return true;
             default:
                 return false;
         }

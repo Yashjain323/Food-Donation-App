@@ -32,7 +32,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         if(requestCode==1) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, 10, locationListener);
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 3000, 100, locationListener);
                 }
             }
         }
@@ -66,7 +66,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.clear();
                     userLocation = new LatLng(location.getLatitude(), location.getLongitude());
                     mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location"));
-                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,10));
+                    mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,15));
                 }
             };
             if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -78,7 +78,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMap.clear();
                 userLocation = new LatLng(myLastLocation.getLatitude(), myLastLocation.getLongitude());
                 mMap.addMarker(new MarkerOptions().position(userLocation).title("Your Location"));
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,10));
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,15));
             }
         }
 }

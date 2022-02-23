@@ -41,7 +41,6 @@
         <activity android:name=".DonorList" />
         <activity android:name=".DonorFoodDetailsPost" />
         <activity android:name=".DonorHomePage" />
-        <activity android:name=".DonorAchievements" />
         <activity android:name=".reciepientSetup" />
         <activity android:name=".RecipientSignIn" />
         <activity android:name=".DonorSignIn" />

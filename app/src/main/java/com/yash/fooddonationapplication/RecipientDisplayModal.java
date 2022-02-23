@@ -50,6 +50,10 @@ public class RecipientDisplayModal {
             this.id = id;
         }
 
+    public RecipientDisplayModal() {
+        // empty constructor
+        // required for Firebase.
+    }
         // constructor
         public  RecipientDisplayModal(String courseName, String courseDuration, String courseTracks, String courseDescription) {
             this.courseName = courseName;

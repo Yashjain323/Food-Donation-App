@@ -26,7 +26,7 @@ public class DonorHomePage extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.menuAchieve:
-                intent = new Intent(DonorHomePage.this, DonorAchievements.class);
+                intent = new Intent(DonorHomePage.this, DonorList.class);
                 startActivity(intent);
                 return true;
             case R.id.menuMaps:
@@ -34,11 +34,13 @@ public class DonorHomePage extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.donorLogOut:
-                intent = new Intent(DonorHomePage.this,DonorSignIn.class);
+                intent = new Intent(DonorHomePage.this,DecidingActivity.class);
                 startActivity(intent);
+                return true;
             case R.id.donorContactUs:
                 intent = new Intent(DonorHomePage.this,DonorContactUs.class);
                 startActivity(intent);
+                return true;
             default:
                 return false;
         }

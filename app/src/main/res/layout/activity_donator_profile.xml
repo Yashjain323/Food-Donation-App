@@ -15,7 +15,7 @@
         android:layout_marginTop="28dp"
         android:background="@drawable/custom_button"
         android:scaleType="centerCrop"
-        android:src="@drawable/donatorprofile"
+        android:src="@color/black"
         app:civ_border_color="@color/textcolor"
         app:civ_border_width="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/donorPicButton"
+        android:id="@+id/rUpdateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewRecepient"
@@ -37,7 +37,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNameseller"
+        android:id="@+id/rNameSet"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -45,13 +45,13 @@
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddressseller"
+        app:layout_constraintBottom_toTopOf="@+id/rEmailSet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextEmailAddressseller"
+        android:id="@+id/rEmailSet"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -60,13 +60,13 @@
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/useraddress2seller"
+        app:layout_constraintBottom_toTopOf="@+id/rAddressSet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/useraddress2seller"
+        android:id="@+id/rAddressSet"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -75,13 +75,13 @@
         android:inputType="text"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/useraddressseller"
+        app:layout_constraintBottom_toTopOf="@+id/rContactSet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.613"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/useraddressseller"
+        android:id="@+id/rContactSet"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
@@ -101,7 +101,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="240dp"
-        android:text="Edit Profile"
+        android:text="Set Profile"
         android:textColor="@color/textcolor"
         android:textSize="25dp"
         android:textStyle="bold"

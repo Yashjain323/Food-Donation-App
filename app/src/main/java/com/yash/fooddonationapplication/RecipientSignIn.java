@@ -85,7 +85,8 @@ public class RecipientSignIn extends AppCompatActivity {
                                     @NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_SHORT).show();
-
+                                    emailTextView.setText("");
+                                    passwordTextView.setText("");
                                     // hide the progress bar
                                     progressbar.setVisibility(View.GONE);
 

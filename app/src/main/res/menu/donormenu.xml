@@ -5,7 +5,7 @@
     <item android:title="My Profile"
         android:id="@+id/menuProfile">
     </item>
-    <item android:title="My Achievements"
+    <item android:title="Donor List"
         android:id="@+id/menuAchieve">
     </item>
     <item android:title="Show on maps"

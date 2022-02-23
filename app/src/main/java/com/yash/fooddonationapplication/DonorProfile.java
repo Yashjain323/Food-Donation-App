@@ -1,16 +1,22 @@
 package com.yash.fooddonationapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -25,13 +31,26 @@ public class DonorProfile extends AppCompatActivity {
     ImageView click_image_id;
     private static final int pic_id = 123;
     @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == 2) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "camera permission granted", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "camera permission denied", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donator_profile);
         camera_open_id= (FloatingActionButton)findViewById(R.id.clickpicR);
         click_image_id = (ImageView)findViewById(R.id.imageViewRecepient);
+        if (ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA}, 2);
+        }
         camera_open_id.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v)
             {

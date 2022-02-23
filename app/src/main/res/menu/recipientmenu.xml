@@ -5,11 +5,13 @@
     <item android:title="My Profile"
         android:id="@+id/recepientProfile">
     </item>
-    <item android:title="Our Receivings"
+    <item android:title="Recipient List"
         android:id="@+id/recepientAchieve">
     </item>
     <item android:title="Show on maps"
         android:id="@+id/menuMaps"/>
+    <item android:title="Contact Us"
+        android:id="@+id/rContactUs"></item>
     <item android:title="Log Out"
         android:id="@+id/recepientLogOut"></item>
 </menu>
