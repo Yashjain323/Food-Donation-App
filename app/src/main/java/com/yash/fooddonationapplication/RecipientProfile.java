@@ -4,7 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -30,7 +29,7 @@ public class RecipientProfile extends AppCompatActivity {
     FloatingActionButton camera_open_id;
     ImageView click_image_id;
     private static final int pic_id = 123;
-    private EditText NameEdt, EmailEdt, AddressEdt, ContactEdt;
+    private EditText NameEdt,NameRegister, EmailEdt, AddressEdt, ContactEdt;
     private Button addCourseBtn;
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -49,6 +48,7 @@ public class RecipientProfile extends AppCompatActivity {
         setContentView(R.layout.activity_recipient_profile);
             // creating variables for our edittext, button and dbhandle
                 // initializing all our variables.
+                NameRegister = findViewById(R.id.fName);
                 NameEdt = findViewById(R.id.rNameSet);
                 EmailEdt = findViewById(R.id.rEmailSet);
                 AddressEdt = findViewById(R.id.rAddressSet);
@@ -68,7 +68,8 @@ public class RecipientProfile extends AppCompatActivity {
                         String courseTracks = EmailEdt.getText().toString();
                         String courseDuration = AddressEdt.getText().toString();
                         String courseDescription = ContactEdt.getText().toString();
-
+                        EditText editRText = (EditText)findViewById(R.id.rNameSet);
+                        NameEdt.setText(NameRegister.getText().toString());
                         // validating if the text fields are empty or not.
                         if (courseName.isEmpty() && courseTracks.isEmpty() && courseDuration.isEmpty() && courseDescription.isEmpty()) {
                             Toast.makeText(RecipientProfile.this, "Please enter all the data..", Toast.LENGTH_SHORT).show();
@@ -83,7 +84,6 @@ public class RecipientProfile extends AppCompatActivity {
              @Override
              public void onClick(View v)
              {
-
                 // Create the camera_intent ACTION_IMAGE_CAPTURE
                 // it will open the camera for capture the image
                 Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);

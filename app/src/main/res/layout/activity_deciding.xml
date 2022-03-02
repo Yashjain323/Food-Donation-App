@@ -24,39 +24,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/donorDecide"
-            android:layout_width="123dp"
-            android:layout_height="123dp"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_marginTop="108dp"
-            android:background="@drawable/custom_button"
-            android:text="Donor"
-            android:textColor="@color/textcolor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView8" />
+    <Button
+        android:id="@+id/donorDecide"
+        android:layout_width="174dp"
+        android:layout_height="164dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:layout_marginTop="108dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Donor"
+        android:textColor="#FFCE3B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recipientDecide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
 
-        <Button
-            android:id="@+id/recipientDecide"
-            android:layout_width="123dp"
-            android:layout_height="123dp"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_marginBottom="196dp"
-            android:background="@drawable/custom_button"
-            android:text="Recipient"
-            android:textColor="@color/textcolor"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/donorDecide" />
+    <Button
+        android:id="@+id/recipientDecide"
+        android:layout_width="174dp"
+        android:layout_height="164dp"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="196dp"
+        android:background="@drawable/custom_button"
+        android:text="Recipient"
+        android:textColor="#FFCE3B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/donorDecide"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

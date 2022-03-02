@@ -59,8 +59,8 @@ import java.util.ArrayList;
                 // initializing our text views
                 courseNameTV = itemView.findViewById(R.id.idTVCourseName);
                 courseDescTV = itemView.findViewById(R.id.idTVCourseDescription);
-                courseDurationTV = itemView.findViewById(R.id.idTVCourseDuration);
-                courseTracksTV = itemView.findViewById(R.id.idTVCourseTracks);
+                courseDurationTV = itemView.findViewById(R.id.idTVCourseTracks);
+                courseTracksTV = itemView.findViewById(R.id.idTVCourseDuration);
             }
         }
     }
